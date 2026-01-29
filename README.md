@@ -1,0 +1,2 @@
+# RUN BY USING THE FOLLOWING COMMAND
+python3 main.py
