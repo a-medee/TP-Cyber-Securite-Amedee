@@ -22,10 +22,10 @@ class Block:
         return hasher.hexdigest()
 
     def __repr__(self):
-        CYAN = '\033[96m'   # Pour les clés (Index, Hash...)
-        GREEN = '\033[92m'  # Pour les valeurs importantes
-        YELLOW = '\033[93m' # Pour la date
-        ENDC = '\033[0m'    # Pour réinitialiser
+        CYAN = '\033[96m'
+        GREEN = '\033[92m'
+        YELLOW = '\033[93m'
+        ENDC = '\033[0m'
         BOLD = '\033[1m'
 
         return (f"""{CYAN}{BOLD}Index:{ENDC}       {self.index}\n{CYAN}{BOLD}Heure:{ENDC}{YELLOW}{self.timestamp}{ENDC}\n{CYAN}{BOLD}Data:{ENDC}        {self.data}\n{CYAN}{BOLD}Hash:{ENDC}        {GREEN}{self.hash}{ENDC}\n{CYAN}{BOLD}Prev Hash:{ENDC}   {self.previous_hash}\n{CYAN}{BOLD}Signature:{ENDC}   {self.signature}""")

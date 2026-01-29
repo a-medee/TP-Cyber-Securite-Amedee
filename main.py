@@ -89,7 +89,7 @@ def menu():
             try:
                 target_index = int(input(f"Quel numéro de bloc voulez-vous pirater ? : "))
 
-                # Vérification que l'index existe
+
                 if 0 <= target_index < len(blockchain.chain):
                     target_block = blockchain.chain[target_index]
 
@@ -98,7 +98,6 @@ def menu():
 
                     new_data = input(f"\n{Colors.WARNING}Entrez la nouvelle donnée frauduleuse : {Colors.ENDC}")
 
-                    # L'ATTAQUE : On écrase la donnée en mémoire
                     blockchain.chain[target_index].data = new_data
 
                     print(f"\n{Colors.FAIL}PIRATAGE RÉUSSI !{Colors.ENDC}")
